@@ -37,7 +37,7 @@ const CategorySearch = () => {
 
         # Display List of Category
         <div className='grid grid-cols-3 mt-5 md:grid-cols-4 lg:grid-cols-6'>
-            {categoryList.map((item, index) => index<6 && (
+            {categoryList.length > 0 ? categoryList.map((item, index) => index<6 && (
                 <div 
                     key={index}
                     className='flex flex-col text-center items-center p-5
@@ -49,7 +49,14 @@ const CategorySearch = () => {
                         />
                         <label className='text-blue-600 text-sm'>{item?.attributes?.Name}</label>
                 </div>
-            ))}
+            ))
+            :
+            [1,2,3,4,5,6].map((item, index) => (
+                <div className='h-[120px] w-[120px] bg-slate-200 animate-pulse rounded-lg'>
+
+                </div>
+            ))
+            }
         </div>
     </div>
   )
