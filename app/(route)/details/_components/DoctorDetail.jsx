@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { GraduationCap } from 'lucide-react'
 import React from 'react'
+import BookAppointment from './BookAppointment'
 
 const DoctorDetail = ({doctor}) => {
 
@@ -54,7 +55,7 @@ const DoctorDetail = ({doctor}) => {
                         width={30} height={30} />
                     ))}
                 </div>
-                <Button className="mt-3 rounded-full">Book Appointment</Button>
+                <BookAppointment doctor={doctor} />
             </div>
         </div>
         <div className='p-3 mt-5 border-[1px] rounded-lg'>
